@@ -221,7 +221,7 @@ async def reg_teacher(message: Message, state: FSMContext):
                 f"📱 @{message.from_user.username or 'username yo\'q'}\n"
                 f"🆔 {message.from_user.id}\n"
                 f"📚 {data['subject']} | {data['level']}\n"
-                f"👨‍🏫 {teacher_info}",
+                f"👨‍🏫 {teacher_info}"
                 parse_mode="HTML"
             )
         except:

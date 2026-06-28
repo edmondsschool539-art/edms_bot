@@ -17,7 +17,7 @@ TOKEN = os.getenv("BOT_TOKEN", "")
 SUPER_ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
  
 logging.basicConfig(level=logging.INFO)
-bot = Bot(BOT_TOKEN)
+bot = Bot(os.getenv("BOT_TOKEN"))
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
  

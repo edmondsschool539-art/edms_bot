@@ -17,9 +17,7 @@ TOKEN = os.getenv("BOT_TOKEN", "")
 SUPER_ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
  
 logging.basicConfig(level=logging.INFO)
-import os
-print("DEBUG BOT_TOKEN:", repr(os.getenv("BOT_TOKEN")))
-print("DEBUG ALL ENV:", list(os.environ.keys()))
+bot = Bot(token=os.getenv("BOT_TOKEN"))
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
  

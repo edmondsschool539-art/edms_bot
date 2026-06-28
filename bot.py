@@ -17,7 +17,7 @@ TOKEN = os.getenv("BOT_TOKEN", "")
 SUPER_ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
  
 logging.basicConfig(level=logging.INFO)
-bot = Bot(token=TOKEN)
+bot = Bot(BOT_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
  
@@ -72,7 +72,6 @@ def levels_kb():
     for lv in LEVELS:
         kb.add(KeyboardButton(lv))
     return kb
- 
 async def teachers_kb(subject):
     teachers = await get_teachers()
     kb = ReplyKeyboardMarkup(resize_keyboard=True)
